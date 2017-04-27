@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>flex box</title>
+        <style>
+            @keyframes animer {
+                from {
+                    transform: scale(1) rotate(0deg);
+                }
+                to {
+                    background: red;
+                    transform: scale(2) rotate(360deg);
+                }
+            }
+            
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .circle.is-active {
+                animation: animer 3s infinite alternate;
+            }
+            .circle {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                border: solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;  
+            }
+            
+        </style>
+        <script>
+            function start() {
+                var circle = document.getElementById('circle');
+//                console.log(circle);
+//                console.log(typeof circle);
+                circle.onclick = function ecouterClick() {
+                    console.log('click !!!');
+                    circle.classList.toggle('is-active');
+                }
+            }
+        </script>
+    </head>
+    <body onload="start();">
+        <div id="circle" class="circle">a</div>
+        <div id="circle" class="circle">b</div>
+    </body>
+</html>

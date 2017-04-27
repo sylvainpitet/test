@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inverser couleurs</title>
+        <style> 
+            .exo {
+                display: flex;
+            }     
+            .carre {
+                cursor: pointer;
+                height: 100px; 
+                line-height: 100px; 
+                width: 100px;
+                margin-right: 20px;
+                border: 4px solid;
+                text-align: center;
+                font-weight: bold;
+            } 
+            .rouge {
+                background: red;
+            } 
+            .vert {
+                background: green;
+            }
+        </style>
+        <script src="app.js"></script>
+    </head>
+    <body onload="app();">
+        <div class="exo">
+            <div id="c_rouge" class="carre rouge">
+                <span>A</span>
+            </div>
+            <div id="c_vert" class="carre vert">
+                <span>B</span>
+            </div>
+        </div>
+    </body>
+</html>
